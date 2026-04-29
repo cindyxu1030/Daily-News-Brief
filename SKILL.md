@@ -1,6 +1,6 @@
 ---
 name: news-brief
-description: Cindy's personal daily news brief. Use when the user types /news-brief, /brief, /NewsBrief, "run news brief", "run the news brief", or asks for "today's news", "morning news", "daily brief", "news digest", "AI news", or similar. Searches the last 24 hours across 5 categories (AI Core, AI × Marketing, Tech Macro, Geopolitics & Econ, Culture & Creator Economy), deduplicates against the last 7 days, selects 6 stories spanning ≥3 categories, and emails a reading digest to cindyxu.1030@gmail.com. This is a personal reading brief — NOT a content-generation pipeline. No persona voice, no script output, no HeyGen. Also runs automatically daily at 7am PST via LaunchAgent.
+description: Cindy's personal daily news brief. Use when the user types /news-brief, /brief, /NewsBrief, "run news brief", "run the news brief", or asks for "today's news", "morning news", "daily brief", "news digest", "AI news", or similar. Searches the last 24 hours across 5 categories (AI Core, AI × Marketing, Tech Macro, Geopolitics & Econ, Culture & Creator Economy), deduplicates against the last 7 days, selects 6 stories spanning ≥3 categories, and emails a reading digest to cindyxu1030@gmail.com. This is a personal reading brief — NOT a content-generation pipeline. No persona voice, no script output, no HeyGen. Also runs automatically daily at 7am PST via LaunchAgent.
 ---
 
 # News Brief — Personal Daily Reader
@@ -79,7 +79,7 @@ Skipped today: [e.g., "AI × Marketing — covered 3 days running"]
 
 ```bash
 python3 ~/.claude/skills/news-brief/scripts/send_email.py \
-  --to "cindyxu.1030@gmail.com,jiayuaw3@uci.edu" \
+  --to "cindyxu1030@gmail.com,jiayuaw3@uci.edu" \
   --subject "News Brief — YYYY-MM-DD" \
   --body-file /tmp/newsbrief_body.txt
 ```
@@ -100,7 +100,7 @@ Save the same email body as markdown to `~/Documents/NewsBrief/YYYY-MM-DD.md`. O
 One-line confirmation to the user:
 
 ```
-News Brief sent to cindyxu.1030@gmail.com, jiayuaw3@uci.edu — 6 stories, categories: [list]. Archive: ~/Documents/NewsBrief/YYYY-MM-DD.md
+News Brief sent to cindyxu1030@gmail.com, jiayuaw3@uci.edu — 6 stories, categories: [list]. Archive: ~/Documents/NewsBrief/YYYY-MM-DD.md
 ```
 
 ---
